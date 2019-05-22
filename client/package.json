@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://seleniumbullet.herokuapp.com",
+  "proxy": "https://seleniumbullet.herokuapp.com:80",
   "eslintConfig": {
     "extends": "react-app"
   },
