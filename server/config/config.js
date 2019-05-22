@@ -1,10 +1,10 @@
-const dotenv = require("dotenv");
-const path = require("path");
+// const dotenv = require("dotenv");
+// const path = require("path");
 
 // Setting up the dotenv config
-dotenv.config({
-  path: path.resolve(__dirname, "../.env.local")
-});
+// dotenv.config({
+//   path: path.resolve(__dirname, "../.env.local")
+// });
 
 module.exports = {
   mongoURI: process.env.MONGO_URI,

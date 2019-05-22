@@ -3,7 +3,7 @@ const mongoose = require("mongoose"); // orm to interact with mongodb
 // const bodyParser = require("body-parser");
 const path = require("path");
 // const config = require("config");
-const dotenv = require("./config/config");
+// const dotenv = require("./config/config");
 const { mongoURI } = require("./config/config");
 
 // const items = require("./routes/api/items");
