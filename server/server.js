@@ -5,6 +5,7 @@ const path = require("path");
 // const config = require("config");
 // const dotenv = require("./config/config");
 const { mongoURI } = require("./config/config");
+const cors = require("cors");
 
 // const items = require("./routes/api/items");
 
@@ -32,6 +33,19 @@ mongoose
   .connect(db, { useNewUrlParser: true, useCreateIndex: true })
   .then(() => console.log("MongoDB Connected.."))
   .catch(err => console.log(err));
+
+// CORS middleware
+app.use(cors({ origin: "*" }));
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Credentials", true);
+//   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin,X-Requested-With,Content-Type,Accept,content-type,application/json"
+//   );
+//   next();
+// });
 
 // Use Routes
 // app.use("/api/items", items);
