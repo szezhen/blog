@@ -35,7 +35,7 @@ mongoose
   .catch(err => console.log(err));
 
 // CORS middleware
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "https://confident-darwin-f47339.netlify.com" }));
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
 //   res.header("Access-Control-Allow-Credentials", true);
