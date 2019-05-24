@@ -1,3 +1,4 @@
+const newrelic = require("newrelic");
 const express = require("express"); // backend framework
 const mongoose = require("mongoose"); // orm to interact with mongodb
 // const bodyParser = require("body-parser");
@@ -6,7 +7,6 @@ const path = require("path");
 // const dotenv = require("./config/config");
 const { mongoURI } = require("./config/config");
 const cors = require("cors");
-const newrelic = require("newrelic");
 
 // const items = require("./routes/api/items");
 
