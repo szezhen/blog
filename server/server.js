@@ -6,6 +6,7 @@ const path = require("path");
 // const dotenv = require("./config/config");
 const { mongoURI } = require("./config/config");
 const cors = require("cors");
+const newrelic = require("newrelic");
 
 // const items = require("./routes/api/items");
 
