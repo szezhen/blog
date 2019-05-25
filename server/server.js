@@ -1,4 +1,6 @@
-const newrelic = require("newrelic");
+if (process.env.NODE_ENV === "production") {
+  const newrelic = require("newrelic");
+}
 const express = require("express"); // backend framework
 const mongoose = require("mongoose"); // orm to interact with mongodb
 // const bodyParser = require("body-parser");
