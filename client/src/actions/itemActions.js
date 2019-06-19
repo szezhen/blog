@@ -2,6 +2,7 @@ import axios from "axios";
 import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from "./types";
 import { tokenConfig } from "./authActions";
 import { returnErrors } from "./errorActions";
+import { backendURL } from "../config/config";
 
 export const getItems = () => dispatch => {
   // return {
@@ -9,7 +10,7 @@ export const getItems = () => dispatch => {
   // };
   dispatch(setItemsLoading());
   axios
-    .get("/api/items")
+    .get(backendURL + "/api/items")
     .then(res =>
       dispatch({
         type: GET_ITEMS,
@@ -27,7 +28,7 @@ export const addItem = item => (dispatch, getState) => {
   //   payload: item
   // };
   axios
-    .post("/api/items", item, tokenConfig(getState))
+    .post(backendURL + "/api/items", item, tokenConfig(getState))
     .then(res =>
       dispatch({
         type: ADD_ITEM,
@@ -45,7 +46,7 @@ export const deleteItem = id => (dispatch, getState) => {
   //   payload: id
   // };
   axios
-    .delete(`/api/items/${id}`, tokenConfig(getState))
+    .delete(backendURL + `/api/items/${id}`, tokenConfig(getState))
     .then(res =>
       dispatch({
         type: DELETE_ITEM,
