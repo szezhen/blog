@@ -48,6 +48,7 @@ const corsOptionsDelegate = function(req, callback) {
   }
   callback(null, corsOptions); // callback expects two parameters: error and options
 };
+app.use(cors(corsOptions));
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
 //   res.header("Access-Control-Allow-Credentials", true);
